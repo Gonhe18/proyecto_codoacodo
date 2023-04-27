@@ -1,0 +1,137 @@
+.contenedor_btn {
+	display: flex;
+	justify-content: end;
+	margin: 3px 0px 13px 0;
+}
+.btn_nuevo {
+	width: 18vw;
+	padding: 7px 0;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	background-color: rgb(91, 91, 236);
+	font-size: 1.1rem;
+	color: white;
+	font-weight: 700;
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+}
+.btn_nuevo:hover {
+	background-color: rgb(171, 171, 243);
+}
+
+.tabla {
+	width: 100%;
+	border: solid 1px #002b5b;
+	border-spacing: 0;
+	border-radius: 5px;
+}
+
+.tabla .encabezado_tabla {
+	background-color: #002b5b;
+}
+
+.tabla .encabezado_tabla tr {
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+}
+.tabla .encabezado_tabla tr th {
+	color: white;
+	font-size: 1.2rem;
+	padding: 5px;
+	text-align: center;
+}
+
+.tabla .cuerpo_tabla tr {
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+}
+
+.tabla .cuerpo_tabla tr td {
+	padding: 5px 3px;
+	border: solid 1px #002b5b;
+	border-bottom-width: 1px;
+	border-right-width: 1px;
+	border-left-width: 1px;
+}
+
+.icon_acciones {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.icon_acciones box-icon {
+	margin: 0 5px;
+	cursor: pointer;
+}
+
+/* MQ */
+
+@media screen and (max-width: 575px) {
+	.contenedor_btn {
+		margin-right: 5px;
+		margin-bottom: 10px;
+	}
+	.btn_nuevo {
+		width: 40vw;
+		font-size: 1rem;
+	}
+
+	.tabla .encabezado_tabla tr {
+		grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+	}
+	.tabla .encabezado_tabla tr th {
+		font-size: 0.9rem;
+		padding: 5px;
+	}
+
+	.tabla .cuerpo_tabla tr {
+		grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+	}
+
+	.tabla .cuerpo_tabla tr td {
+		padding: 4px;
+		font-size: 0.9rem;
+	}
+
+	.icon_acciones box-icon {
+		margin: 0 2px;
+		width: 20px;
+	}
+}
+
+@media screen and (min-width: 576px) and (max-width: 992px) {
+	.contenedor_btn {
+		margin-right: 5px;
+		margin-bottom: 10px;
+	}
+	.btn_nuevo {
+		width: 30vw;
+		font-size: 1rem;
+	}
+
+	.tabla .encabezado_tabla tr {
+		grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+	}
+	.tabla .encabezado_tabla tr th {
+		font-size: 0.9rem;
+		padding: 5px;
+	}
+
+	.tabla .cuerpo_tabla tr {
+		grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+	}
+
+	.tabla .cuerpo_tabla tr td {
+		padding: 4px;
+		font-size: 0.9rem;
+	}
+
+	.icon_acciones box-icon {
+		margin: 0 2px;
+	}
+}

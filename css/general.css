@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	height: 100vh;
+	background-color: azure;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	font-family: "Roboto", sans-serif;
+}
+
+.encabezado {
+	background-color: #e4dccf;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 20px;
+}
+
+.encabezado img {
+	margin: 2px 0;
+	width: 200px;
+	margin-left: 10px;
+}
+
+.encabezado .contenedor_contacto {
+	display: flex;
+	margin-right: 15px;
+}
+.encabezado .contenedor_contacto .btn_contacto {
+	width: 12vw;
+	padding: 7px 0;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	background-color: whitesmoke;
+	color: #002b5b;
+	font-size: 1.1rem;
+	font-weight: 700;
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+}
+.encabezado .contenedor_contacto .btn_contacto:hover {
+	background-color: #002b5b;
+	color: whitesmoke;
+}
+
+.contenedor {
+	display: flex;
+	background-color: #f5f2ebfa;
+	flex-grow: 1;
+	padding-bottom: 10px;
+}
+.contenedor .estructura_contenido {
+	width: 100%;
+}
+.contenedor_gral {
+	background-color: white;
+	margin: 15px;
+	padding: 10px 20px;
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-ms-border-radius: 15px;
+	-o-border-radius: 15px;
+}
+
+.pie_pagina {
+	background-color: #002b5b;
+	text-align: center;
+}
+.pie_pagina p {
+	color: white;
+	font-size: 1.2rem;
+	padding: 8px 0;
+}
+
+/* MQ */
+
+@media screen and (max-width: 575px) {
+	.encabezado {
+		padding: 0;
+	}
+	.encabezado img {
+		width: 150px;
+		margin-left: 2px;
+	}
+	.encabezado .contenedor_contacto {
+		margin-right: 5px;
+	}
+	.encabezado .contenedor_contacto .btn_contacto {
+		width: 30vw;
+		font-size: 1rem;
+	}
+
+	.contenedor_gral {
+		margin: 10px 0;
+		padding: 10px 2px;
+	}
+
+	.pie_pagina p {
+		font-size: 0.9rem;
+	}
+}
+@media screen and (max-width: 992px) {
+	.encabezado {
+		padding: 0 5px;
+	}
+	.encabezado img {
+		width: 175px;
+	}
+	.encabezado .contenedor_contacto .btn_contacto {
+		width: 20vw;
+	}
+
+	.contenedor_gral {
+		padding: 10px;
+	}
+
+	.pie_pagina p {
+		font-size: 0.9rem;
+	}
+}

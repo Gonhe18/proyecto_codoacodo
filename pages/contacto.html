@@ -8,8 +8,6 @@
 
 		<!-- CSS General -->
 		<link rel="stylesheet" href="\css\general.css" />
-		<!-- CSS Propio de esta página -->
-		<link rel="stylesheet" href="\css\contacto.css" />
 	</head>
 	<body>
 		<header class="encabezado">
@@ -23,7 +21,64 @@
 		<main class="contenedor">
 			<section class="estructura_contenido">
 				<div class="contenedor_gral">
-					<!-- ACÁ VA TODO EL CONTENIDO RELACIONADO A LA PÁGINA -->
+					<h1 class="tit_principal">Contacto</h1>
+					<form action="" method="post" class="contenedor_form">
+						<div class="bloque_datos">
+							<div class="bloque_campos">
+								<label class="label_form" for="name"
+									>Nombre completo</label
+								>
+								<input
+									type="text"
+									name="name"
+									id="name"
+									class="input_form"
+									placeholder="Ingrese su nombre completo"
+								/>
+							</div>
+							<div class="bloque_campos">
+								<label class="label_form" for="email">Email</label>
+								<input
+									type="email"
+									name="email"
+									id="email"
+									class="input_form"
+									placeholder="Ingrese su email"
+								/>
+							</div>
+						</div>
+						<div class="bloque_descripcion">
+							<div class="bloque_campos">
+								<label class="label_form" for="motivo_contacto"
+									>Motivo de contacto</label
+								>
+								<input
+									type="text"
+									name="motivo_contacto"
+									id="motivo_contacto"
+									class="input_form"
+									placeholder="Ingrese el motivo de su contacto"
+								/>
+							</div>
+							<div class="bloque_campos">
+								<label class="label_form" for="descripcion_contacto"
+									>Descripción</label
+								>
+								<textarea
+									name="descripcion_contacto"
+									id="descripcion_contacto"
+									cols="30"
+									rows="10"
+									class="textarea_form"
+									placeholder="Ingrese una descripción sobre su contacto"
+								></textarea>
+							</div>
+						</div>
+						<div class="btn_form">
+							<button class="btn_guardar">Enviar</button>
+							<a href="../index.html" class="btn_volver">Volver</a>
+						</div>
+					</form>
 				</div>
 			</section>
 		</main>

@@ -29,7 +29,9 @@
 	border-spacing: 0;
 	border-radius: 5px;
 }
-
+.oculto {
+	display: none;
+}
 .tabla .encabezado_tabla {
 	background-color: #002b5b;
 }
@@ -56,6 +58,7 @@
 	border-bottom-width: 1px;
 	border-right-width: 1px;
 	border-left-width: 1px;
+	text-align: center;
 }
 
 .icon_acciones {
@@ -67,6 +70,23 @@
 .icon_acciones box-icon {
 	margin: 0 5px;
 	cursor: pointer;
+}
+
+.sin_tramites {
+	display: flex;
+	margin: 25px 0;
+	justify-content: center;
+	align-items: center;
+	height: 250px;
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-ms-border-radius: 15px;
+	-o-border-radius: 15px;
+	box-shadow: 2px 4px 10px gray;
+}
+.msj_sin_tramites {
+	font-size: 1.5rem;
 }
 
 /* MQ */
@@ -102,6 +122,16 @@
 		margin: 0 2px;
 		width: 20px;
 	}
+	.sin_tramites {
+		width: 95%;
+		margin: auto;
+		margin-top: 30px;
+		justify-content: center;
+		height: 300px;
+	}
+	.msj_sin_tramites {
+		font-size: 1.3rem;
+	}
 }
 
 @media screen and (min-width: 576px) and (max-width: 992px) {
@@ -133,5 +163,16 @@
 
 	.icon_acciones box-icon {
 		margin: 0 2px;
+	}
+
+	.sin_tramites {
+		width: 95%;
+		margin: auto;
+		margin-top: 30px;
+		justify-content: center;
+		height: 300px;
+	}
+	.msj_sin_tramites {
+		font-size: 1.5rem;
 	}
 }

@@ -29,145 +29,20 @@
 							>Nuevo trámite</a
 						>
 					</div>
-					<table class="tabla">
-						<thead class="encabezado_tabla">
-							<tr>
-								<th>N° trámite</th>
-								<th>Nombre</th>
-								<th>Fecha creción</th>
-								<th>Estado</th>
-								<th>Acciones</th>
-							</tr>
-						</thead>
-						<tbody class="cuerpo_tabla">
-							<tr>
-								<td>asd</td>
-								<td>asd</td>
-								<td>asd</td>
-								<td>asd</td>
-								<td class="icon_acciones">
-									<a href="/pages/cambio_estado.html">
-										<box-icon
-											name="transfer-alt"
-											color="green"
-											title="Cambiar de estado"
-										></box-icon>
-									</a>
-									<box-icon
-										type="solid"
-										name="trash"
-										color="red"
-										title="Eliminar trámite"
-									></box-icon>
-								</td>
-							</tr>
-							<tr>
-								<td>asd</td>
-								<td>asd</td>
-								<td>asd</td>
-								<td>asd</td>
-								<td class="icon_acciones">
-									<a href="/pages/cambio_estado.html">
-										<box-icon
-											name="transfer-alt"
-											color="green"
-											title="Cambiar de estado"
-										></box-icon>
-									</a>
-									<box-icon
-										type="solid"
-										name="trash"
-										color="red"
-										title="Eliminar trámite"
-									></box-icon>
-								</td>
-							</tr>
-							<tr>
-								<td>asd</td>
-								<td>asd</td>
-								<td>asd</td>
-								<td>asd</td>
-								<td class="icon_acciones">
-									<a href="/pages/cambio_estado.html">
-										<box-icon
-											name="transfer-alt"
-											color="green"
-											title="Cambiar de estado"
-										></box-icon>
-									</a>
-									<box-icon
-										type="solid"
-										name="trash"
-										color="red"
-										title="Eliminar trámite"
-									></box-icon>
-								</td>
-							</tr>
-							<tr>
-								<td>asd</td>
-								<td>asd</td>
-								<td>asd</td>
-								<td>asd</td>
-								<td class="icon_acciones">
-									<a href="/pages/cambio_estado.html">
-										<box-icon
-											name="transfer-alt"
-											color="green"
-											title="Cambiar de estado"
-										></box-icon>
-									</a>
-									<box-icon
-										type="solid"
-										name="trash"
-										color="red"
-										title="Eliminar trámite"
-									></box-icon>
-								</td>
-							</tr>
-							<tr>
-								<td>asd</td>
-								<td>asd</td>
-								<td>asd</td>
-								<td>asd</td>
-								<td class="icon_acciones">
-									<a href="/pages/cambio_estado.html">
-										<box-icon
-											name="transfer-alt"
-											color="green"
-											title="Cambiar de estado"
-										></box-icon>
-									</a>
-									<box-icon
-										type="solid"
-										name="trash"
-										color="red"
-										title="Eliminar trámite"
-									></box-icon>
-								</td>
-							</tr>
-							<tr>
-								<td>asd</td>
-								<td>asd</td>
-								<td>asd</td>
-								<td>asd</td>
-								<td class="icon_acciones">
-									<a href="/pages/cambio_estado.html">
-										<box-icon
-											name="transfer-alt"
-											color="green"
-											title="Cambiar de estado"
-										></box-icon>
-									</a>
-									<box-icon
-										type="solid"
-										name="trash"
-										color="red"
-										title="Eliminar trámite"
-									></box-icon>
-								</td>
-							</tr>
-						</tbody>
-					</table>
+					<div id="bloque_tabla">
+						<table class="tabla oculto" id="tabla">
+							<thead class="encabezado_tabla">
+								<tr>
+									<th>N° trámite</th>
+									<th>Nombre</th>
+									<th>Fecha actualización</th>
+									<th>Estado</th>
+									<th>Acciones</th>
+								</tr>
+							</thead>
+							<tbody class="cuerpo_tabla" id="body_home"></tbody>
+						</table>
+					</div>
 				</div>
 			</section>
 		</main>
@@ -177,5 +52,22 @@
 
 		<!-- ICONOS -->
 		<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+		<script src="/js/index.js"></script>
 	</body>
 </html>
+
+<!-- <td class="icon_acciones">
+	<a href="/pages/cambio_estado.html">
+		<box-icon
+			name="transfer-alt"
+			color="green"
+			title="Cambiar de estado"
+		></box-icon>
+	</a>
+	<box-icon
+		type="solid"
+		name="trash"
+		color="red"
+		title="Eliminar trámite"
+	></box-icon>
+</td> -->

@@ -67,7 +67,11 @@
 	justify-content: center;
 }
 
-.icon_acciones box-icon {
+.icon_acciones .btn_icon {
+	background-color: white;
+	border: none;
+}
+.icon_acciones .btn_icon box-icon {
 	margin: 0 5px;
 	cursor: pointer;
 }

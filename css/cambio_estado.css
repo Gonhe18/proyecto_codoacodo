@@ -1,0 +1,62 @@
+.tabla_cambio_estado {
+	width: 100%;
+	border-spacing: 0;
+	padding: 10px 20px;
+}
+.tabla_cambio_estado .encabezado_tabla {
+	background-color: #002b5b;
+}
+.encabezado_tabla tr,
+.cuerpo_tabla tr {
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr 1fr;
+}
+.tabla_cambio_estado .encabezado_tabla tr th {
+	color: white;
+	font-size: 0.9rem;
+	padding: 5px;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+}
+
+.tabla_cambio_estado .cuerpo_tabla tr td {
+	padding: 5px 3px;
+	border: solid 1px #002b5b;
+	border-bottom-width: 1px;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+}
+
+@media screen and (max-width: 575px) {
+	.tabla_cambio_estado {
+		padding: 0px;
+	}
+
+	.tabla_cambio_estado .encabezado_tabla tr th {
+		font-size: 0.7rem;
+		padding: 5px;
+	}
+
+	.tabla_cambio_estado .cuerpo_tabla tr td {
+		font-size: 0.9rem;
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.tabla_cambio_estado {
+		padding: 0px;
+	}
+
+	.tabla_cambio_estado .encabezado_tabla tr th {
+		font-size: 0.9rem;
+		padding: 5px;
+	}
+
+	.tabla_cambio_estado .cuerpo_tabla tr td {
+		font-size: 0.9rem;
+	}
+}

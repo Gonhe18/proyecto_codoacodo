@@ -1,4 +1,6 @@
 //CREAR NUEVO TRÁMITE
+import { formatoFecha } from "./extras.js";
+
 let form_nuevo = document.getElementById("form_nuevo");
 
 form_nuevo.addEventListener("submit", (e) => {
@@ -6,14 +8,12 @@ form_nuevo.addEventListener("submit", (e) => {
 
 	const array_tramites = [];
 	const tramites = localStorage.getItem("tramites");
-	const FECHA = new Date(Date.now());
-	const HOY = FECHA.toLocaleDateString();
 
 	let id_tramite = tramites != null ? JSON.parse(tramites).slice(-1) : 1;
 
 	const DATA = Object.fromEntries(new FormData(e.target));
-	DATA.fecha_actualizacion = HOY;
-	DATA.estado = "Pendiente";
+	DATA.fecha_actualizacion = formatoFecha();
+	DATA.estado = "pendiente";
 
 	if (tramites == null) {
 		DATA.id = id_tramite;

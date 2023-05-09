@@ -25,17 +25,49 @@ window.addEventListener("load", (e) => {
 
 form_cambio_estado.addEventListener("submit", (e) => {
 	e.preventDefault();
-	const DATA = Object.fromEntries(new FormData(e.target));
+	Swal.fire({
+		title: "Cambiar de estado?",
+		icon: "question",
+		showConfirmButton: true,
+		confirmButtonColor: "#379237",
+		confirmButtonText: "Confirmar",
+		showCancelButton: true,
+		cancelButtonColor: "#FF1E1E",
+		cancelButtonText: `Cancelar`,
+	}).then((result) => {
+		if (result.isConfirmed) {
+			const Toast = Swal.mixin({
+				toast: true,
+				position: "top-end",
+				showConfirmButton: false,
+				timer: 1500,
+				timerProgressBar: true,
+				didOpen: (toast) => {
+					toast.addEventListener("mouseenter", Swal.stopTimer);
+					toast.addEventListener("mouseleave", Swal.resumeTimer);
+				},
+			});
+			Toast.fire({
+				icon: "success",
+				title: "Trámite actualizado exitosamente",
+			});
 
-	lista_tramites.forEach((tramite) => {
-		if (tramite.id == ID_TRAMITE) {
-			tramite.fecha_actualizacion = formatoFecha();
-			tramite.estado = DATA.estado;
-			tramite.motivo_actualizacion = DATA.motivo_actualizacion;
-			tramite.descripcion_actualizacion = DATA.descripcion_actualizacion;
+			const DATA = Object.fromEntries(new FormData(e.target));
+
+			lista_tramites.forEach((tramite) => {
+				if (tramite.id == ID_TRAMITE) {
+					tramite.fecha_actualizacion = formatoFecha();
+					tramite.estado = DATA.estado;
+					tramite.motivo_actualizacion = DATA.motivo_actualizacion;
+					tramite.descripcion_actualizacion =
+						DATA.descripcion_actualizacion;
+				}
+			});
+			localStorage.setItem("tramites", JSON.stringify(lista_tramites));
+
+			setTimeout(() => {
+				location.href = "/index.html";
+			}, 1200);
 		}
 	});
-	localStorage.setItem("tramites", JSON.stringify(lista_tramites));
-
-	location.href = "/index.html";
 });

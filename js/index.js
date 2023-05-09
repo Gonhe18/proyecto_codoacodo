@@ -36,16 +36,52 @@ window.addEventListener("load", (e) => {
 });
 
 const eliminarTramite = (id_tramite) => {
-	const TRAMITES = localStorage.getItem("tramites");
-	let lista_tramites = JSON.parse(TRAMITES);
+	Swal.fire({
+		title: "Eliminar trámite?",
+		icon: "question",
+		showConfirmButton: true,
+		confirmButtonColor: "#379237",
+		confirmButtonText: "Confirmar",
+		showCancelButton: true,
+		cancelButtonColor: "#FF1E1E",
+		cancelButtonText: `Cancelar`,
+	}).then((result) => {
+		if (result.isConfirmed) {
+			const Toast = Swal.mixin({
+				toast: true,
+				position: "top-end",
+				showConfirmButton: false,
+				timer: 1500,
+				timerProgressBar: true,
+				didOpen: (toast) => {
+					toast.addEventListener("mouseenter", Swal.stopTimer);
+					toast.addEventListener("mouseleave", Swal.resumeTimer);
+				},
+			});
+			Toast.fire({
+				icon: "success",
+				title: "Trámite eliminado exitosamente",
+			});
 
-	lista_tramites.forEach((tramite) => {
-		if (tramite.id == id_tramite) {
-			lista_tramites.splice(lista_tramites.indexOf(tramite), 1);
+			const TRAMITES = localStorage.getItem("tramites");
+			let lista_tramites = JSON.parse(TRAMITES);
+
+			lista_tramites.forEach((tramite) => {
+				if (tramite.id == id_tramite) {
+					lista_tramites.splice(lista_tramites.indexOf(tramite), 1);
+				}
+			});
+
+			if (lista_tramites.length > 0) {
+				localStorage.setItem("tramites", JSON.stringify(lista_tramites));
+			} else {
+				localStorage.removeItem("tramites");
+			}
+			setTimeout(() => {
+				location.href = "/index.html";
+			}, 1200);
 		}
 	});
-	localStorage.setItem("tramites", JSON.stringify(lista_tramites));
-	location.href = "/index.html";
 };
 
 const cambiarEstado = (id_tramite) => {
@@ -89,5 +125,10 @@ const btnSegunEstado = (tramite) => {
 };
 
 const resolucionTramite = (motivo, descripcion) => {
-	console.log(motivo, descripcion);
+	Swal.fire({
+		title: `${motivo}`,
+		text: `${descripcion}`,
+		confirmButtonColor: "#3085d6",
+		confirmButtonText: "Aceptar",
+	});
 };

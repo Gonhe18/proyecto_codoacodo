@@ -13,7 +13,9 @@ body {
 	justify-content: space-between;
 	font-family: "Roboto", sans-serif;
 }
-
+.oculto {
+	display: none;
+}
 .encabezado {
 	background-color: #e4dccf;
 	display: flex;
@@ -22,17 +24,73 @@ body {
 	padding: 0 20px;
 }
 
-.encabezado img {
-	margin: 2px 0;
-	width: 200px;
-	margin-left: 10px;
+.encabezado .bloq_campos_tiempo {
+	width: 20%;
 }
 
-.encabezado .contenedor_contacto {
+.bloque_tiempo {
 	display: flex;
-	margin-right: 15px;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+	-webkit-animation-duration: 2s;
+	animation-duration: 2s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
 }
-.encabezado .contenedor_contacto .btn_contacto {
+
+.descrip_tiempo {
+	display: flex;
+	flex-direction: row;
+}
+.descrip_tiempo .ico_tiempo {
+	margin: 0;
+	width: 40%;
+}
+.bloque_temperatura {
+	display: flex;
+	flex-direction: column;
+	text-transform: capitalize;
+	align-items: start;
+	justify-content: center;
+	width: 100%;
+	line-height: 1.25rem;
+}
+.bloque_temperatura .temp {
+	font-size: 1.2rem;
+	font-weight: 600;
+	line-height: 1.25rem;
+}
+.bloque_temperatura .descrip {
+	font-size: 0.9rem;
+	line-height: 1.25rem;
+}
+.localidad {
+	font-size: 0.9rem;
+	line-height: 1.25rem;
+	padding: 0 5px;
+}
+
+.encabezado .encabezado_fijo {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+	width: 80%;
+}
+
+.encabezado_fijo img {
+	width: 200px;
+}
+
+.contenedor_contacto {
+	display: flex;
+	justify-content: center;
+	width: 20%;
+}
+.contenedor_contacto .btn_contacto {
 	width: 12vw;
 	padding: 7px 0;
 	border-radius: 10px;
@@ -48,7 +106,7 @@ body {
 	text-decoration: none;
 	text-align: center;
 }
-.encabezado .contenedor_contacto .btn_contacto:hover {
+.contenedor_contacto .btn_contacto:hover {
 	background-color: #002b5b;
 	color: whitesmoke;
 }
@@ -154,20 +212,69 @@ body {
 	flex-direction: column;
 }
 
+.error_form {
+	color: red;
+	font-weight: 700;
+	margin-top: 5px;
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
 /* MQ */
 
 @media screen and (max-width: 575px) {
 	.encabezado {
 		padding: 0;
 	}
-	.encabezado img {
+	.encabezado_fijo img {
 		width: 150px;
 		margin-left: 2px;
 	}
-	.encabezado .contenedor_contacto {
+	.encabezado .bloq_campos_tiempo {
+		width: 20%;
+	}
+
+	.bloque_tiempo {
+		margin-top: 5px;
+	}
+
+	.descrip_tiempo .ico_tiempo {
+		width: 30%;
+	}
+	.bloque_temperatura {
+		line-height: 1rem;
+	}
+	.bloque_temperatura .temp {
+		font-size: 0.9rem;
+		line-height: 1rem;
+	}
+	.bloque_temperatura .descrip {
+		font-size: 0.8rem;
+		line-height: 1rem;
+	}
+	.localidad {
+		font-size: 0.8rem;
+		line-height: 1rem;
+	}
+	.contenedor_contacto {
 		margin-right: 5px;
 	}
-	.encabezado .contenedor_contacto .btn_contacto {
+	.contenedor_contacto .btn_contacto {
 		width: 30vw;
 		font-size: 1rem;
 	}
@@ -205,11 +312,45 @@ body {
 	.encabezado {
 		padding: 0 5px;
 	}
-	.encabezado img {
+	.encabezado_fijo img {
 		width: 175px;
 	}
-	.encabezado .contenedor_contacto .btn_contacto {
+	.contenedor_contacto .btn_contacto {
 		width: 20vw;
+	}
+
+	.encabezado .bloq_campos_tiempo {
+		width: 20%;
+	}
+
+	.bloque_tiempo {
+		margin-top: 5px;
+	}
+
+	.descrip_tiempo .ico_tiempo {
+		width: 30%;
+	}
+	.bloque_temperatura {
+		line-height: 1rem;
+	}
+	.bloque_temperatura .temp {
+		font-size: 0.9rem;
+		line-height: 1rem;
+	}
+	.bloque_temperatura .descrip {
+		font-size: 0.8rem;
+		line-height: 1rem;
+	}
+	.localidad {
+		font-size: 0.8rem;
+		line-height: 1rem;
+	}
+	.contenedor_contacto {
+		margin-right: 5px;
+	}
+	.contenedor_contacto .btn_contacto {
+		width: 30vw;
+		font-size: 1rem;
 	}
 
 	.contenedor_gral {

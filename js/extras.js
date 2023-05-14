@@ -9,3 +9,30 @@ export const formatoFecha = () => {
 
 	return dia + "/" + mes + "/" + anio;
 };
+
+export const apiTiempo = () => {
+	navigator.geolocation.getCurrentPosition((position) => {
+		const { latitude, longitude } = position.coords;
+		fetch(
+			`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&lang=es&appid=d3491c204cc549a885ecfd03578534ae`
+		)
+			.then((resp) => resp.json())
+			.then((data) => {
+				if (data) {
+					let tiempo = document.getElementById("tiempo");
+					let ico_tiempo = document.getElementById("ico_tiempo");
+					let temp = document.getElementById("temp");
+					let descrip = document.getElementById("descrip");
+					let localidad = document.getElementById("localidad");
+
+					tiempo.setAttribute("class", "bloque_tiempo");
+
+					ico_tiempo.src = "https://openweathermap.org/img/wn/01d.png";
+
+					temp.innerText = Math.trunc(data.main.temp) + "°";
+					descrip.innerText = data.weather[0].description;
+					localidad.innerText = data.name;
+				}
+			});
+	});
+};

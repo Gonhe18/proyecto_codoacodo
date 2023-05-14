@@ -12,9 +12,28 @@
 	</head>
 	<body>
 		<header class="encabezado">
-			<a href="/index.html">
-				<img src="/img/logo.png" alt="Logo SDT" />
-			</a>
+			<div class="bloq_campos_tiempo">
+				<div id="tiempo" class="oculto">
+					<div class="descrip_tiempo">
+						<img
+							src=""
+							alt="Icono tiempo"
+							id="ico_tiempo"
+							class="ico_tiempo"
+						/>
+						<div id="temperatura" class="bloque_temperatura">
+							<span id="temp" class="temp"></span>
+							<span id="descrip" class="descrip"></span>
+						</div>
+					</div>
+					<span id="localidad" class="localidad"></span>
+				</div>
+			</div>
+			<div class="encabezado_fijo">
+				<a href="/index.html">
+					<img src="/img/logo.png" alt="Logo SDT" />
+				</a>
+			</div>
 			<div class="contenedor_contacto">
 				<a href="/pages/contacto.html" class="btn_contacto">Contacto</a>
 			</div>
@@ -46,38 +65,46 @@
 								<label class="label_form" for="estado"
 									>Estado trámite</label
 								>
-								<select name="estado" id="estado" class="input_form">
+								<select
+									name="estado"
+									id="estado"
+									class="input_form"
+									data-validacion='["required"]'
+								>
 									<option value="">Elija un estado</option>
 									<option value="aprobado">Aprobado</option>
 									<option value="rechazado">Rechazado</option>
 								</select>
+								<span class="hidden" id="error_estado"></span>
 							</div>
 							<div class="bloque_campos">
-								<label class="label_form" for="motivo_actualizacion"
-									>Resolución del trámite</label
+								<label class="label_form" for="motivo"
+									>Motivo respuesta</label
 								>
 								<input
 									type="text"
-									name="motivo_actualizacion"
-									id="motivo_actualizacion"
+									name="motivo"
+									id="motivo"
 									class="input_form"
 									placeholder="Ingrese la resolución del trámite"
+									data-validacion='["required"]'
 								/>
+								<span class="hidden" id="error_motivo"></span>
 							</div>
 							<div class="bloque_campos">
-								<label
-									class="label_form"
-									for="descripcion_actualizacion"
-									>Descripción motivo</label
+								<label class="label_form" for="descripcion"
+									>Descripción respuesta</label
 								>
 								<textarea
-									name="descripcion_actualizacion"
-									id="descripcion_actualizacion"
+									name="descripcion"
+									id="descripcion"
 									cols="30"
 									rows="10"
 									class="textarea_form"
 									placeholder="Ingrese una descripción de la resolución del trámite"
+									data-validacion='["required","min:4"]'
 								></textarea>
+								<span class="hidden" id="error_descripcion"></span>
 							</div>
 						</div>
 						<div class="btn_form">

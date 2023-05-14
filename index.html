@@ -13,9 +13,28 @@
 	</head>
 	<body>
 		<header class="encabezado">
-			<a href="/index.html">
-				<img src="/img/logo.png" alt="Logo SDT" />
-			</a>
+			<div class="bloq_campos_tiempo">
+				<div id="tiempo" class="oculto">
+					<div class="descrip_tiempo">
+						<img
+							src=""
+							alt="Icono tiempo"
+							id="ico_tiempo"
+							class="ico_tiempo"
+						/>
+						<div id="temperatura" class="bloque_temperatura">
+							<span id="temp" class="temp"></span>
+							<span id="descrip" class="descrip"></span>
+						</div>
+					</div>
+					<span id="localidad" class="localidad"></span>
+				</div>
+			</div>
+			<div class="encabezado_fijo">
+				<a href="/index.html">
+					<img src="/img/logo.png" alt="Logo SDT" />
+				</a>
+			</div>
 			<div class="contenedor_contacto">
 				<a href="/pages/contacto.html" class="btn_contacto">Contacto</a>
 			</div>
@@ -57,6 +76,6 @@
 		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 		<!-- JS -->
-		<script src="/js/index.js"></script>
+		<script src="/js/index.js" type="module"></script>
 	</body>
 </html>

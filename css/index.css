@@ -29,9 +29,6 @@
 	border-spacing: 0;
 	border-radius: 5px;
 }
-.oculto {
-	display: none;
-}
 .tabla .encabezado_tabla {
 	background-color: #002b5b;
 }

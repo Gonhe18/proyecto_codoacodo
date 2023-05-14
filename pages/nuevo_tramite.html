@@ -11,9 +11,28 @@
 	</head>
 	<body>
 		<header class="encabezado">
-			<a href="/index.html">
-				<img src="/img/logo.png" alt="Logo SDT" />
-			</a>
+			<div class="bloq_campos_tiempo">
+				<div id="tiempo" class="oculto">
+					<div class="descrip_tiempo">
+						<img
+							src=""
+							alt="Icono tiempo"
+							id="ico_tiempo"
+							class="ico_tiempo"
+						/>
+						<div id="temperatura" class="bloque_temperatura">
+							<span id="temp" class="temp"></span>
+							<span id="descrip" class="descrip"></span>
+						</div>
+					</div>
+					<span id="localidad" class="localidad"></span>
+				</div>
+			</div>
+			<div class="encabezado_fijo">
+				<a href="/index.html">
+					<img src="/img/logo.png" alt="Logo SDT" />
+				</a>
+			</div>
 			<div class="contenedor_contacto">
 				<a href="/pages/contacto.html" class="btn_contacto">Contacto</a>
 			</div>
@@ -37,7 +56,9 @@
 									id="nombre"
 									class="input_form"
 									placeholder="Ingrese su nombre"
+									data-validacion='["required"]'
 								/>
+								<span class="hidden" id="error_nombre"></span>
 							</div>
 							<div class="bloque_campos">
 								<label class="label_form" for="apellido"
@@ -49,7 +70,9 @@
 									id="apellido"
 									class="input_form"
 									placeholder="Ingrese su apellido"
+									data-validacion='["required"]'
 								/>
+								<span class="hidden" id="error_apellido"></span>
 							</div>
 							<div class="bloque_campos">
 								<label class="label_form" for="email">Email</label>
@@ -59,17 +82,23 @@
 									id="email"
 									class="input_form"
 									placeholder="Ingrese su email"
+									data-validacion='["required","email"]'
 								/>
+								<span class="hidden" id="error_email"></span>
 							</div>
 							<div class="bloque_campos">
-								<label class="label_form" for="tel">Telefóno</label>
+								<label class="label_form" for="telefono"
+									>Telefóno</label
+								>
 								<input
-									type="text"
-									name="tel"
-									id="tel"
+									type="number"
+									name="telefono"
+									id="telefono"
 									class="input_form"
 									placeholder="Ingrese su número de teléfono"
+									data-validacion='["required","min:8","max:10"]'
 								/>
+								<span class="hidden" id="error_telefono"></span>
 							</div>
 						</div>
 						<div class="bloque_descripcion">
@@ -81,7 +110,9 @@
 									id="asunto"
 									class="input_form"
 									placeholder="Ingrese el asunto de su trámite"
+									data-validacion='["required"]'
 								/>
+								<span class="hidden" id="error_asunto"></span>
 							</div>
 							<div class="bloque_campos">
 								<label class="label_form" for="descripcion"
@@ -94,7 +125,9 @@
 									rows="10"
 									class="textarea_form"
 									placeholder="Ingrese una descripción de su trámite"
+									data-validacion='["required","min:4"]'
 								></textarea>
+								<span class="hidden" id="error_descripcion"></span>
 							</div>
 						</div>
 						<div class="btn_form">

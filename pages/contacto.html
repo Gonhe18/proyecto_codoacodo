@@ -7,76 +7,213 @@
 		<title>SDT - Contacto</title>
 
 		<!-- CSS General -->
-		<link rel="stylesheet" href="\css\general.css" />
+		<link rel="stylesheet" href="/css/general.css" />
+		<!-- CSS Propio de esta página -->
+		<link rel="stylesheet" href="/css/contacto.css" />
 	</head>
 	<body>
 		<header class="encabezado">
-			<a href="/index.html">
-				<img src="/img/logo.png" alt="Logo SDT" />
-			</a>
-			<div class="contenedor_contacto">
-				<a href="/pages/contacto.html" class="btn_contacto">Contacto</a>
+			<div class="bloq_campos_tiempo">
+				<div id="tiempo" class="oculto">
+					<div class="descrip_tiempo">
+						<img
+							src=""
+							alt="Icono tiempo"
+							id="ico_tiempo"
+							class="ico_tiempo"
+						/>
+						<div id="temperatura" class="bloque_temperatura">
+							<span id="temp" class="temp"></span>
+							<span id="descrip" class="descrip"></span>
+							<span id="localidad" class="localidad"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="encabezado_fijo">
+				<a href="/index.html">
+					<img src="/img/logo.png" alt="Logo SDT" />
+				</a>
 			</div>
 		</header>
+
 		<main class="contenedor">
 			<section class="estructura_contenido">
 				<div class="contenedor_gral">
-					<h1 class="tit_principal">Contacto</h1>
-					<form action="" method="post" class="contenedor_form">
+					<h1 class="tit_principal">Contactos</h1>
+
+					<form
+						class="contenedor_form"
+						id="form_nuevo"
+						action="https://formspree.io/f/mwkjzzvq"
+						method="POST"
+					>
 						<div class="bloque_datos">
-							<div class="bloque_campos">
-								<label class="label_form" for="name"
-									>Nombre completo</label
+							<div class="bloque_campos" id="grupo_apellido">
+								<label class="label_form" for="apellido"
+									>Apellido:</label
 								>
-								<input
-									type="text"
-									name="name"
-									id="name"
-									class="input_form"
-									placeholder="Ingrese su nombre completo"
-								/>
+
+								<div class="form__grupo-input">
+									<input
+										type="text"
+										name="apellido"
+										id="apellido"
+										class="input_form"
+										placeholder="Ingrese su apellido.."
+									/>
+									<i
+										class="form__validacion-estado fas fa-times-circle"
+									></i>
+								</div>
+
+								<p class="form__input-error">
+									<b>Complete el campo correctamente!</b>
+								</p>
 							</div>
-							<div class="bloque_campos">
-								<label class="label_form" for="email">Email</label>
-								<input
-									type="email"
-									name="email"
-									id="email"
-									class="input_form"
-									placeholder="Ingrese su email"
-								/>
+
+							<div class="bloque_campos" id="grupo_nombre">
+								<label class="label_form" for="nombre">Nombre:</label>
+
+								<div class="form__grupo-input">
+									<input
+										type="text"
+										name="nombre"
+										id="nombre"
+										class="input_form"
+										placeholder="Ingrese su nombre.."
+									/>
+									<i
+										class="form__validacion-estado fas fa-times-circle"
+									></i>
+								</div>
+								<p class="form__input-error">
+									<b>Complete el campo correctamente!</b>
+								</p>
+							</div>
+
+							<div class="bloque_campos" id="grupo_email">
+								<label class="label_form" for="email">Email:</label>
+
+								<div class="form__grupo-input">
+									<input
+										type="email"
+										name="email"
+										id="email"
+										class="input_form"
+										placeholder="Ingrese su email.."
+									/>
+									<i
+										class="form__validacion-estado fas fa-times-circle"
+									></i>
+								</div>
+								<p class="form__input-error">
+									<b>Complete el campo correctamente!</b>
+								</p>
+							</div>
+							<div class="bloque_campos" id="grupo_tel">
+								<label class="label_form" for="tel">N° de tel:</label>
+
+								<div class="form__grupo-input">
+									<input
+										type="tel"
+										name="tel"
+										id="tel"
+										class="input_form"
+										placeholder="Ingrese su n° de telefono.."
+									/>
+									<i
+										class="form__validacion-estado fas fa-times-circle"
+									></i>
+								</div>
+								<p class="form__input-error">
+									<b>Complete el campo correctamente!</b>
+								</p>
 							</div>
 						</div>
+
 						<div class="bloque_descripcion">
-							<div class="bloque_campos">
-								<label class="label_form" for="motivo_contacto"
-									>Motivo de contacto</label
-								>
-								<input
-									type="text"
-									name="motivo_contacto"
-									id="motivo_contacto"
-									class="input_form"
-									placeholder="Ingrese el motivo de su contacto"
-								/>
+							<div class="bloque_campos" id="grupo_tramite">
+								<label class="label_form" for="tramite"
+									>N° de trámite:
+								</label>
+
+								<div class="form__grupo-input">
+									<input
+										type="texto"
+										name="tramite"
+										id="tramite"
+										class="input_form"
+										placeholder="Ingrese el n° de trámite"
+									/>
+									<i
+										class="form__validacion-estado fas fa-times-circle"
+									></i>
+								</div>
+								<p class="form__input-error">
+									<b>Complete el campo correctamente!</b>
+								</p>
 							</div>
-							<div class="bloque_campos">
-								<label class="label_form" for="descripcion_contacto"
-									>Descripción</label
-								>
-								<textarea
-									name="descripcion_contacto"
-									id="descripcion_contacto"
-									cols="30"
-									rows="10"
-									class="textarea_form"
-									placeholder="Ingrese una descripción sobre su contacto"
-								></textarea>
+
+							<div class="bloque_campos" id="grupo_asunto">
+								<label class="label_form" for="asunto">Asunto: </label>
+
+								<div class="form__grupo-input">
+									<input
+										type="text"
+										name="asunto"
+										id="asunto"
+										class="input_form"
+										placeholder="Asunto.."
+									/>
+									<i
+										class="form__validacion-estado fas fa-times-circle"
+									></i>
+								</div>
+								<p class="form__input-error">
+									<b>Complete el campo!</b>
+								</p>
+							</div>
+
+							<div class="bloque_campos" id="grupo_comentario">
+								<label class="label_form" for="comentario">
+									Comentario
+								</label>
+
+								<div class="form__grupo-input">
+									<textarea
+										name="comentario"
+										id="comentario"
+										cols="30"
+										rows="10"
+										class="input_form"
+										placeholder="Ingrese aquí su mensaje.."
+									></textarea>
+									<i
+										class="form__validacion-estado fas fa-times-circle"
+									></i>
+								</div>
+								<p class="form__input-error">
+									<b>Complete el campo!</b>
+								</p>
 							</div>
 						</div>
+
+						<div class="form_msje" id="form_msje">
+							<p>
+								<i class="fas fa-exclamation-triangle"></i>
+								<b>ERROR:</b> Por favor rellene el formulario...
+							</p>
+						</div>
+
 						<div class="btn_form">
-							<button class="btn_guardar">Enviar</button>
-							<a href="../index.html" class="btn_volver">Volver</a>
+							<button type="submit" class="btn_guardar">Enviar</button>
+
+							<p class="form_msjExito" id="form_msjExito">
+								<i class="fas fa-check-circle"></i
+								><b> Formulario enviado exitosamente! </b>
+							</p>
+							<a href="/index.html" class="btn_volver">Volver</a>
 						</div>
 					</form>
 				</div>
@@ -84,6 +221,44 @@
 		</main>
 		<footer class="pie_pagina">
 			<p>&copy Codo a Codo 2023</p>
+			<div class="contenedor_contacto">
+				<a href="/pages/contacto.html" class="btn_contacto">Contacto</a>
+			</div>
+			<div class="contenedor_mapa">
+				<div class="info_mapa">
+					<p>Av. Eduardo Madero 470, C1106 CABA</p>
+					<div class="descrip_map" id="mostrar_mapa">
+						<box-icon
+							type="solid"
+							name="map"
+							color="red"
+							size="sm"
+						></box-icon>
+						<span>Ver mapa</span>
+					</div>
+				</div>
+				<div class="oculto" id="mapa">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.085988993467!2d-58.37149272506649!3d-34.60198705740538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a335325f19f9a3%3A0xfd34b93fba734a98!2sLuna%20Park!5e0!3m2!1ses!2sar!4v1684889561985!5m2!1ses!2sar"
+						style="border: 0"
+						allowfullscreen=""
+						loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade"
+						class="i_maps"
+					></iframe>
+				</div>
+			</div>
 		</footer>
+
+		<script src="/js/contacto.js" type="module"></script>
+		<script
+			src="https://kit.fontawesome.com/2c36e9b7b1.js"
+			crossorigin="anonymous"
+		></script>
+
+		<!-- ICONOS -->
+		<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+		<!-- SWEET ALERT -->
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	</body>
 </html>

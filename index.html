@@ -7,9 +7,9 @@
 		<title>SDT - Sistema de trámites</title>
 
 		<!-- CSS General -->
-		<link rel="stylesheet" href="\css\general.css" />
+		<link rel="stylesheet" href="/css/general.css" />
 		<!-- CSS Propio de esta página -->
-		<link rel="stylesheet" href="\css\index.css" />
+		<link rel="stylesheet" href="/css/tabla.css" />
 	</head>
 	<body>
 		<header class="encabezado">
@@ -25,9 +25,9 @@
 						<div id="temperatura" class="bloque_temperatura">
 							<span id="temp" class="temp"></span>
 							<span id="descrip" class="descrip"></span>
+							<span id="localidad" class="localidad"></span>
 						</div>
 					</div>
-					<span id="localidad" class="localidad"></span>
 				</div>
 			</div>
 			<div class="encabezado_fijo">
@@ -35,16 +35,13 @@
 					<img src="/img/logo.png" alt="Logo SDT" />
 				</a>
 			</div>
-			<div class="contenedor_contacto">
-				<a href="/pages/contacto.html" class="btn_contacto">Contacto</a>
-			</div>
 		</header>
 		<main class="contenedor">
 			<section class="estructura_contenido">
 				<div class="contenedor_gral">
 					<h1 class="tit_principal">Gestión de trámites</h1>
 					<div class="contenedor_btn">
-						<a href="/pages/nuevo_tramite.html" class="btn_nuevo"
+						<a href="pages/nuevo_tramite.html" class="btn_nuevo"
 							>Nuevo trámite</a
 						>
 					</div>
@@ -54,9 +51,9 @@
 								<tr>
 									<th>N° trámite</th>
 									<th>Nombre</th>
-									<th>Fecha actualización</th>
+									<th>Fecha modif</th>
 									<th>Estado</th>
-									<th>Acciones</th>
+									<th>Acción</th>
 								</tr>
 							</thead>
 							<tbody class="cuerpo_tabla" id="body_home"></tbody>
@@ -67,6 +64,33 @@
 		</main>
 		<footer class="pie_pagina">
 			<p>&copy Codo a Codo 2023</p>
+			<div class="contenedor_contacto">
+				<a href="/pages/contacto.html" class="btn_contacto">Contacto</a>
+			</div>
+			<div class="contenedor_mapa">
+				<div class="info_mapa">
+					<p>Av. Eduardo Madero 470, C1106 CABA</p>
+					<div class="descrip_map" id="mostrar_mapa">
+						<box-icon
+							type="solid"
+							name="map"
+							color="red"
+							size="sm"
+						></box-icon>
+						<span>Ver mapa</span>
+					</div>
+				</div>
+				<div class="oculto" id="mapa">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.085988993467!2d-58.37149272506649!3d-34.60198705740538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a335325f19f9a3%3A0xfd34b93fba734a98!2sLuna%20Park!5e0!3m2!1ses!2sar!4v1684889561985!5m2!1ses!2sar"
+						style="border: 0"
+						allowfullscreen=""
+						loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade"
+						class="i_maps"
+					></iframe>
+				</div>
+			</div>
 		</footer>
 
 		<!-- ICONOS -->
@@ -76,6 +100,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 		<!-- JS -->
+
 		<script src="/js/index.js" type="module"></script>
 	</body>
 </html>

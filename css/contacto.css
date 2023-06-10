@@ -1,0 +1,93 @@
+.label_form {
+	display: block;
+
+}
+
+.form__grupo-input {
+	position: relative;
+}
+
+.input_form {
+	width: 100%;
+	background: white;
+	transition: 0.3s ease all;
+}
+
+.input_form:focus {
+	border: 3px solid #6daaf0;
+	outline: none;
+	box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+}
+
+.form__input-error {
+	font-size: 16px;
+	color: #bb2929;
+	margin-bottom: 0;
+	display: none;
+}
+
+.form__input-error-activo {
+	display: block;
+}
+
+.form__validacion-estado {
+	position: absolute;
+	right: 10px;
+	bottom: 5px;
+	z-index: 100;
+	font-size: 16px;
+	opacity: 0;
+}
+.form_msje {
+	height: 35px;
+	line-height: 35px;
+	color: rgb(255, 255, 255);
+	background: #ca0303;
+	padding: 0 10px;
+	border-radius: 10px;
+	text-align: center;
+	display: none;
+}
+
+.form_msje-activo {
+	display: block;
+}
+
+.form_msje p {
+	margin: 0;
+}
+
+.form_msjExito {
+	font-size: 16px;
+	color: #12d800;
+	margin-bottom: 0;
+	display: none;
+}
+.form_msjExito-activo {
+	display: block;
+}
+
+/*Estilo validacion*/
+.bloque_campos-correcto .form__validacion-estado {
+	color: #069912;
+	opacity: 5;
+}
+
+.bloque_campos-incorrecto .label_form {
+	color: #bb2929;
+}
+
+.bloque_campos-incorrecto .form__validacion-estado {
+	color: #bb2929;
+	opacity: 1;
+}
+
+.bloque_campos-incorrecto .input_form {
+	border: 3px solid #bb2929;
+}
+
+@media screen and (max-width: 800px) {
+	.form_nuevo {
+		grid-template-columns: 1fr;
+	}
+}

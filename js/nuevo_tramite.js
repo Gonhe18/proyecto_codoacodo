@@ -1,6 +1,9 @@
 //CREAR NUEVO TRÁMITE
-import { formatoFecha, apiTiempo } from "./extras.js";
+
+import { formatoFecha, apiTiempo, ver_mapa } from "./extras.js";
 import { validacionBlur } from "./validaciones.js";
+let mostrar_mapa = document.getElementById("mostrar_mapa");
+let mapa = document.getElementById("mapa");
 
 let form_nuevo = document.getElementById("form_nuevo");
 
@@ -67,4 +70,7 @@ form_nuevo.addEventListener("submit", (e) => {
 			}
 		});
 	}
+});
+mostrar_mapa.addEventListener("click", () => {
+	ver_mapa(mapa);
 });

@@ -7,7 +7,7 @@ export const formatoFecha = () => {
 			: FECHA.getMonth() + 1;
 	let anio = FECHA.getFullYear();
 
-	return dia + "/" + mes + "/" + anio;
+	return dia + "-" + mes + "-" + anio;
 };
 
 export const apiTiempo = () => {
@@ -19,6 +19,7 @@ export const apiTiempo = () => {
 			.then((resp) => resp.json())
 			.then((data) => {
 				if (data) {
+					console.log();
 					let tiempo = document.getElementById("tiempo");
 					let ico_tiempo = document.getElementById("ico_tiempo");
 					let temp = document.getElementById("temp");
@@ -27,7 +28,7 @@ export const apiTiempo = () => {
 
 					tiempo.setAttribute("class", "bloque_tiempo");
 
-					ico_tiempo.src = "https://openweathermap.org/img/wn/01d.png";
+					ico_tiempo.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
 
 					temp.innerText = Math.trunc(data.main.temp) + "°";
 					descrip.innerText = data.weather[0].description;
@@ -35,4 +36,8 @@ export const apiTiempo = () => {
 				}
 			});
 	});
+};
+
+export const ver_mapa = (maps) => {
+	maps.classList.toggle("mapa");
 };

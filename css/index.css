@@ -35,7 +35,8 @@
 
 .tabla .encabezado_tabla tr {
 	display: grid;
-	grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+	grid-template-columns: 0.5fr 2fr 0.5fr 1fr 1fr;
+	align-items: center;
 }
 .tabla .encabezado_tabla tr th {
 	color: white;
@@ -46,15 +47,14 @@
 
 .tabla .cuerpo_tabla tr {
 	display: grid;
-	grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+	grid-template-columns: 0.5fr 2fr 0.5fr 1fr 1fr;
+	align-items: center;
+	border: solid 1px #002b5b;
+	border-bottom-width: 1px;
 }
 
 .tabla .cuerpo_tabla tr td {
 	padding: 5px 3px;
-	border: solid 1px #002b5b;
-	border-bottom-width: 1px;
-	border-right-width: 1px;
-	border-left-width: 1px;
 	text-align: center;
 	text-transform: capitalize;
 }
@@ -103,16 +103,9 @@
 		font-size: 1rem;
 	}
 
-	.tabla .encabezado_tabla tr {
-		grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
-	}
 	.tabla .encabezado_tabla tr th {
 		font-size: 0.9rem;
 		padding: 5px;
-	}
-
-	.tabla .cuerpo_tabla tr {
-		grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
 	}
 
 	.tabla .cuerpo_tabla tr td {
@@ -145,17 +138,9 @@
 		width: 30vw;
 		font-size: 1rem;
 	}
-
-	.tabla .encabezado_tabla tr {
-		grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
-	}
 	.tabla .encabezado_tabla tr th {
 		font-size: 0.9rem;
 		padding: 5px;
-	}
-
-	.tabla .cuerpo_tabla tr {
-		grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
 	}
 
 	.tabla .cuerpo_tabla tr td {

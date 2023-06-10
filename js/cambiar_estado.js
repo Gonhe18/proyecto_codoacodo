@@ -1,5 +1,7 @@
-import { formatoFecha, apiTiempo } from "./extras.js";
+import { formatoFecha, apiTiempo, ver_mapa } from "./extras.js";
 import { validacionBlur } from "./validaciones.js";
+let mostrar_mapa = document.getElementById("mostrar_mapa");
+let mapa = document.getElementById("mapa");
 
 const form_cambio_estado = document.getElementById("form_cambio_estado");
 const ID_TRAMITE = localStorage.getItem("id_tramite");
@@ -72,4 +74,7 @@ form_cambio_estado.addEventListener("submit", (e) => {
 			}
 		});
 	}
+});
+mostrar_mapa.addEventListener("click", () => {
+	ver_mapa(mapa);
 });

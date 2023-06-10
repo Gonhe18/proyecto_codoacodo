@@ -1,8 +1,10 @@
 // RECUPERAR TODOS LOS TRÁMITES
-import { apiTiempo } from "./extras.js";
+import { apiTiempo, ver_mapa } from "./extras.js";
 let body_home = document.getElementById("body_home");
 let bloque_tabla = document.getElementById("bloque_tabla");
 let tabla = document.getElementById("tabla");
+let mostrar_mapa = document.getElementById("mostrar_mapa");
+let mapa = document.getElementById("mapa");
 
 window.addEventListener("load", (e) => {
 	e.preventDefault();
@@ -62,11 +64,11 @@ const btnSegunEstado = (tramite) => {
 	} else {
 		if (tramite.estado == "aprobado") {
 			btn = `<button class="btn_icon" onclick='resolucionTramite(${tramite.id})'>
-						<box-icon type='solid' name='check-circle' color='green' title='Motivo aprobación'></box-icon>
+						<box-icon type='solid' size='sm' name='check-circle' color='green' title='Motivo aprobación'></box-icon>
 					</button>`;
 		} else {
 			btn = `<button class="btn_icon" onclick='resolucionTramite(${tramite.id})'>
-						<box-icon type='solid' name='x-circle' color='red' title='Motivo rechazo'></box-icon>
+						<box-icon type='solid' size='sm' name='x-circle' color='red' title='Motivo rechazo'></box-icon>
 					 </button>`;
 		}
 	}
@@ -142,3 +144,7 @@ const resolucionTramite = (id_tramite) => {
 		}
 	});
 };
+
+mostrar_mapa.addEventListener("click", () => {
+	ver_mapa(mapa);
+});

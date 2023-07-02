@@ -4,13 +4,12 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>SDT - Cambio de estado</title>
+		<title>SDT - Nuevo estado</title>
 
 		<!-- CSS General -->
 		<link rel="stylesheet" href="/css/general.css" />
 		<!-- Menú navegación -->
 		<link rel="stylesheet" href="/css/menu_navegacion.css" />
-		<link rel="stylesheet" href="/css/tabla.css" />
 	</head>
 	<body>
 		<header class="encabezado">
@@ -58,78 +57,47 @@
 		<main class="contenedor">
 			<section class="estructura_contenido">
 				<div class="contenedor_gral">
-					<h1 class="tit_principal">Cambio de estado</h1>
-					<table class="tabla">
-						<thead class="encabezado_tabla_cambio_estado">
-							<tr>
-								<th>N° trámite</th>
-								<th>Nombre</th>
-								<th>Fecha modif</th>
-								<th>Estado</th>
-							</tr>
-						</thead>
-						<tbody
-							class="cuerpo_tabla_cambio_estado"
-							id="tb_cambio_estado"
-						></tbody>
-					</table>
-
-					<form
-						action="cambio_estado.html"
-						method="post"
-						class="contenedor_form"
-						id="form_cambio_estado"
-					>
-						<div class="bloque_descripcion">
+					<h1 class="tit_principal">Nuevo estado</h1>
+					<form method="post" class="contenedor_form" id="form_nuevo">
+						<div class="bloque_datos">
 							<div class="bloque_campos">
-								<label class="label_form" for="estado"
-									>Estado trámite</label
-								>
-								<select
-									name="estado"
-									id="estado"
-									class="input_form"
-									data-validacion='["required"]'
-								>
-									<option value="">Elija un estado</option>
-									<option value="aprobado">Aprobado</option>
-									<option value="rechazado">Rechazado</option>
-								</select>
-								<span class="hidden" id="error_estado"></span>
-							</div>
-							<div class="bloque_campos">
-								<label class="label_form" for="motivo"
-									>Motivo respuesta</label
+								<label class="label_form" for="estado_tramite"
+									>Estado</label
 								>
 								<input
 									type="text"
-									name="motivo"
-									id="motivo"
+									name="estado_tramite"
+									id="estado_tramite"
 									class="input_form"
-									placeholder="Ingrese la resolución del trámite"
+									placeholder="Ingrese el estado"
 									data-validacion='["required"]'
 								/>
-								<span class="hidden" id="error_motivo"></span>
+								<span class="hidden" id="error_estado_tramite"></span>
 							</div>
 							<div class="bloque_campos">
 								<label class="label_form" for="descripcion"
-									>Descripción respuesta</label
+									>Descripción</label
 								>
-								<textarea
+								<input
+									type="text"
 									name="descripcion"
 									id="descripcion"
-									cols="30"
-									rows="10"
-									class="textarea_form"
-									placeholder="Ingrese una descripción de la resolución del trámite"
-									data-validacion='["required","min:4"]'
-								></textarea>
+									class="input_form"
+									placeholder="Ingrese una descripción"
+									data-validacion='["required"]'
+								/>
 								<span class="hidden" id="error_descripcion"></span>
 							</div>
 						</div>
 						<div class="btn_form">
-							<button class="btn_guardar">Actualizar</button>
-							<a href="/index.html" class="btn_volver">Volver</a>
+							<button class="btn_guardar" id="guardar_nuevo">
+								Crear
+							</button>
+							<a
+								href="/pages/estados_tramites/tabla.html"
+								class="btn_volver"
+								>Volver</a
+							>
 						</div>
 					</form>
 				</div>
@@ -137,9 +105,6 @@
 		</main>
 		<footer class="pie_pagina">
 			<p>&copy Codo a Codo 2023</p>
-			<div class="contenedor_contacto">
-				<a href="/pages/contacto.html" class="btn_contacto">Contacto</a>
-			</div>
 			<div class="contenedor_mapa">
 				<div class="info_mapa">
 					<p>Av. Eduardo Madero 470, C1106 CABA</p>
@@ -173,7 +138,11 @@
 		<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
 		<!-- JS -->
-		<script src="/js/cambiar_estado.js" type="module"></script>
+		<script
+			src="/pages/estados_tramites/js/alta_estado.js"
+			type="module"
+		></script>
+
 		<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 		<script>
 			$(".hide").on("click", function () {

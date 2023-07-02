@@ -19,7 +19,6 @@ export const apiTiempo = () => {
 			.then((resp) => resp.json())
 			.then((data) => {
 				if (data) {
-					console.log();
 					let tiempo = document.getElementById("tiempo");
 					let ico_tiempo = document.getElementById("ico_tiempo");
 					let temp = document.getElementById("temp");

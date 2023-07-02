@@ -6,14 +6,17 @@
 	margin-top: 25px;
 }
 .tabla .encabezado_tabla,
-.tabla .encabezado_tabla_cambio_estado {
+.tabla .encabezado_tabla_cambio_estado,
+.tabla .encabezado_tabla_tipo_tram {
 	background-color: #002b5b;
 }
 
 .tabla .encabezado_tabla tr,
 .tabla .cuerpo_tabla tr,
 .tabla .encabezado_tabla_cambio_estado tr,
-.tabla .cuerpo_tabla_cambio_estado tr {
+.tabla .cuerpo_tabla_cambio_estado tr,
+.tabla .encabezado_tabla_tipo_tram tr,
+.tabla .cuerpo_tabla_tipo_tram tr {
 	display: grid;
 	align-items: center;
 	justify-content: center;
@@ -28,8 +31,14 @@
 	grid-template-columns: 50px 1fr 50px 60px;
 }
 
-.tabla .encabezado_tabla tr th,
-.tabla .encabezado_tabla_cambio_estado tr th {
+.tabla .encabezado_tabla_tipo_tram tr,
+.tabla .cuerpo_tabla_tipo_tram tr {
+	grid-template-columns: 1fr 2fr 1fr;
+}
+
+.tabla .encabezado_tabla_tipo_tram tr th,
+.tabla .encabezado_tabla_cambio_estado tr th,
+.tabla .encabezado_tabla_tipo_tram tr th {
 	color: white;
 	font-size: 0.7rem;
 	padding: 5px 3px;
@@ -37,7 +46,8 @@
 }
 
 .tabla .cuerpo_tabla tr td,
-.tabla .cuerpo_tabla_cambio_estado tr td {
+.tabla .cuerpo_tabla_cambio_estado tr td,
+.cuerpo_tabla_tipo_tram tr td {
 	padding: 5px 3px;
 	display: flex;
 	justify-content: center;
@@ -56,6 +66,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	gap: 5px;
 }
 
 .icon_acciones .btn_icon {
@@ -103,13 +114,17 @@
 	}
 
 	.tabla .encabezado_tabla tr th,
-	.tabla .encabezado_tabla_cambio_estado tr th {
+	.tabla .encabezado_tabla_cambio_estado tr th,
+	.tabla .encabezado_tabla_tipo_tram tr th,
+	.tabla .cuerpo_tabla_tipo_tram tr th {
 		font-size: 0.9rem;
 		padding: 5px;
 	}
 
 	.tabla .cuerpo_tabla tr td,
-	.tabla .cuerpo_tabla_cambio_estado tr td {
+	.tabla .cuerpo_tabla_cambio_estado tr td,
+	.tabla .encabezado_tabla_tipo_tram tr td,
+	.tabla .cuerpo_tabla_tipo_tram tr td {
 		padding: 4px;
 		font-size: 0.9rem;
 	}
@@ -164,7 +179,9 @@
 		padding: 15px;
 	}
 
-	/* .icon_acciones .btn_icon {
-		font-size: 3rem !important;
-	} */
+	.tabla .encabezado_tabla_tipo_tram tr td,
+	.tabla .cuerpo_tabla_tipo_tram tr td {
+		font-size: 1.4rem;
+		padding: 15px;
+	}
 }

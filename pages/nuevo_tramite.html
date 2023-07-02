@@ -8,6 +8,8 @@
 
 		<!-- CSS General -->
 		<link rel="stylesheet" href="/css/general.css" />
+		<!-- Menú navegación -->
+		<link rel="stylesheet" href="/css/menu_navegacion.css" />
 	</head>
 	<body>
 		<header class="encabezado">
@@ -34,6 +36,24 @@
 				</a>
 			</div>
 		</header>
+		<nav>
+			<ul>
+				<li><a href="/index.html">Inicio</a></li>
+				<li>
+					<a href="/pages/puestos_trabajo/tabla.html">Puestos trabajo</a>
+				</li>
+				<li>
+					<a href="/pages/estados_tramites/tabla.html">Estados trámite</a>
+				</li>
+				<li><a href="/pages/tipo_tramite/tabla.html">Tipos trámite</a></li>
+				<li>
+					<a href="/pages/contacto.html" class="btn_contacto">Contacto</a>
+				</li>
+			</ul>
+			<div class="hide">
+				<box-icon name="menu" color="white"></box-icon>
+			</div>
+		</nav>
 		<main class="contenedor">
 			<section class="estructura_contenido">
 				<div class="contenedor_gral">
@@ -176,5 +196,12 @@
 
 		<!-- JS -->
 		<script src="/js/nuevo_tramite.js" type="module"></script>
+
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+		<script>
+			$(".hide").on("click", function () {
+				$("nav ul").toggle("slow");
+			});
+		</script>
 	</body>
 </html>

@@ -55,20 +55,18 @@ body {
 	align-items: start;
 	justify-content: center;
 	width: 100%;
-	line-height: 1.25rem;
 }
 .bloque_temperatura .temp {
-	font-size: 1.2rem;
+	font-size: 1rem;
 	font-weight: 600;
-	line-height: 1.25rem;
 }
 .bloque_temperatura .descrip {
 	font-size: 0.8rem;
-	line-height: 1.25rem;
+	line-height: 20px;
 }
 .bloque_temperatura .localidad {
 	font-size: 0.8rem;
-	line-height: 1.25rem;
+	line-height: 20px;
 }
 
 .encabezado .encabezado_fijo {
@@ -86,7 +84,6 @@ body {
 	font-size: 1.5rem;
 	font-weight: 700;
 	text-align: center;
-	margin: 15px 0;
 	color: #155094;
 }
 .contenedor {
@@ -137,7 +134,7 @@ body {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	margin: 15px;
+	padding: 50px 0 20px 0;
 }
 .btn_guardar,
 .btn_volver {
@@ -356,8 +353,7 @@ body {
 		margin: 0;
 	}
 	.bloque_datos {
-		display: flex;
-		flex-direction: column;
+		padding: 20px 0;
 	}
 	.bloque_campos {
 		margin: 5px;
@@ -426,15 +422,15 @@ body {
 		width: 50%;
 	}
 	.bloque_temperatura .temp {
-		font-size: 1.5rem;
+		font-size: 1rem;
 	}
 	.bloque_temperatura .descrip {
-		font-size: 1.1rem;
-		line-height: 25px;
+		font-size: 1rem;
+		line-height: 20px;
 	}
 	.bloque_temperatura .localidad {
-		font-size: 1.1rem;
-		line-height: 25px;
+		font-size: 1rem;
+		line-height: 20px;
 	}
 }
 
@@ -455,15 +451,15 @@ body {
 		width: 50%;
 	}
 	.bloque_temperatura .temp {
-		font-size: 1.8rem;
+		font-size: 1.1rem;
 	}
 	.bloque_temperatura .descrip {
-		font-size: 1.3rem;
-		line-height: 25px;
+		font-size: 1.1rem;
+		line-height: 20px;
 	}
 	.bloque_temperatura .localidad {
-		font-size: 1.3rem;
-		line-height: 25px;
+		font-size: 1.1rem;
+		line-height: 20px;
 	}
 	.label_form {
 		font-size: 1.5rem;

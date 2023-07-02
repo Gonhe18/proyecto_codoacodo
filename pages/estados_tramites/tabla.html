@@ -4,12 +4,13 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>SDT - Cambio de estado</title>
+		<title>SDT - Estados de trámites</title>
 
 		<!-- CSS General -->
 		<link rel="stylesheet" href="/css/general.css" />
-		<!-- Menú navegación -->
+		<!-- Menú de navegación -->
 		<link rel="stylesheet" href="/css/menu_navegacion.css" />
+		<!-- CSS Propio de esta página -->
 		<link rel="stylesheet" href="/css/tabla.css" />
 	</head>
 	<body>
@@ -55,91 +56,38 @@
 				<box-icon name="menu" color="white"></box-icon>
 			</div>
 		</nav>
+
 		<main class="contenedor">
 			<section class="estructura_contenido">
 				<div class="contenedor_gral">
-					<h1 class="tit_principal">Cambio de estado</h1>
-					<table class="tabla">
-						<thead class="encabezado_tabla_cambio_estado">
-							<tr>
-								<th>N° trámite</th>
-								<th>Nombre</th>
-								<th>Fecha modif</th>
-								<th>Estado</th>
-							</tr>
-						</thead>
-						<tbody
-							class="cuerpo_tabla_cambio_estado"
-							id="tb_cambio_estado"
-						></tbody>
-					</table>
-
-					<form
-						action="cambio_estado.html"
-						method="post"
-						class="contenedor_form"
-						id="form_cambio_estado"
-					>
-						<div class="bloque_descripcion">
-							<div class="bloque_campos">
-								<label class="label_form" for="estado"
-									>Estado trámite</label
-								>
-								<select
-									name="estado"
-									id="estado"
-									class="input_form"
-									data-validacion='["required"]'
-								>
-									<option value="">Elija un estado</option>
-									<option value="aprobado">Aprobado</option>
-									<option value="rechazado">Rechazado</option>
-								</select>
-								<span class="hidden" id="error_estado"></span>
-							</div>
-							<div class="bloque_campos">
-								<label class="label_form" for="motivo"
-									>Motivo respuesta</label
-								>
-								<input
-									type="text"
-									name="motivo"
-									id="motivo"
-									class="input_form"
-									placeholder="Ingrese la resolución del trámite"
-									data-validacion='["required"]'
-								/>
-								<span class="hidden" id="error_motivo"></span>
-							</div>
-							<div class="bloque_campos">
-								<label class="label_form" for="descripcion"
-									>Descripción respuesta</label
-								>
-								<textarea
-									name="descripcion"
-									id="descripcion"
-									cols="30"
-									rows="10"
-									class="textarea_form"
-									placeholder="Ingrese una descripción de la resolución del trámite"
-									data-validacion='["required","min:4"]'
-								></textarea>
-								<span class="hidden" id="error_descripcion"></span>
-							</div>
-						</div>
-						<div class="btn_form">
-							<button class="btn_guardar">Actualizar</button>
-							<a href="/index.html" class="btn_volver">Volver</a>
-						</div>
-					</form>
+					<h1 class="tit_principal">Estados de trámites</h1>
+					<div class="contenedor_btn">
+						<a
+							href="/pages/estados_tramites/alta_estado.html"
+							class="btn_nuevo"
+							>Nuevo estado</a
+						>
+					</div>
+					<div id="bloque_tabla">
+						<table class="tabla oculto" id="tabla">
+							<thead class="encabezado_tabla_tipo_tram">
+								<tr>
+									<th>Estado</th>
+									<th>Descripción</th>
+									<th>Acción</th>
+								</tr>
+							</thead>
+							<tbody
+								class="cuerpo_tabla_tipo_tram"
+								id="body_home"
+							></tbody>
+						</table>
+					</div>
 				</div>
 			</section>
 		</main>
 		<footer class="pie_pagina">
 			<p>&copy Codo a Codo 2023</p>
-			<div class="contenedor_contacto">
-				<a href="/pages/contacto.html" class="btn_contacto">Contacto</a>
-			</div>
 			<div class="contenedor_mapa">
 				<div class="info_mapa">
 					<p>Av. Eduardo Madero 470, C1106 CABA</p>
@@ -166,14 +114,19 @@
 			</div>
 		</footer>
 
-		<!-- SWEET ALERT -->
-		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
 		<!-- ICONOS -->
 		<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
+		<!-- SWEET ALERT -->
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 		<!-- JS -->
-		<script src="/js/cambiar_estado.js" type="module"></script>
+
+		<script
+			src="/pages/estados_tramites/js/estados_tramite.js"
+			type="module"
+		></script>
+
 		<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 		<script>
 			$(".hide").on("click", function () {

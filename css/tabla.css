@@ -5,25 +5,27 @@
 	border-radius: 5px;
 	margin-top: 25px;
 }
-.tabla .encabezado_tabla,
+.tabla .encabezado_tabla_home,
 .tabla .encabezado_tabla_cambio_estado,
 .tabla .encabezado_tabla_tipo_tram {
 	background-color: #002b5b;
 }
 
-.tabla .encabezado_tabla tr,
-.tabla .cuerpo_tabla tr,
+.tabla .encabezado_tabla_home tr,
+.tabla .cuerpo_tabla_home tr,
 .tabla .encabezado_tabla_cambio_estado tr,
 .tabla .cuerpo_tabla_cambio_estado tr,
 .tabla .encabezado_tabla_tipo_tram tr,
 .tabla .cuerpo_tabla_tipo_tram tr {
 	display: grid;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-between;
+	width: 100%;
+	/* padding: 0 10px; */
 }
-.tabla .encabezado_tabla tr,
-.tabla .cuerpo_tabla tr {
-	grid-template-columns: 50px 1fr 50px 60px 50px;
+.encabezado_tabla_home tr,
+.cuerpo_tabla_home tr {
+	grid-template-columns: 20px 60px 60px 60px 30px;
 }
 
 .tabla .encabezado_tabla_cambio_estado tr,
@@ -38,17 +40,19 @@
 
 .tabla .encabezado_tabla_tipo_tram tr th,
 .tabla .encabezado_tabla_cambio_estado tr th,
-.tabla .encabezado_tabla_tipo_tram tr th {
+.tabla .encabezado_tabla_tipo_tram tr th,
+.tabla .encabezado_tabla_home tr th,
+.table .cuerpo_tabla_home tr th {
 	color: white;
 	font-size: 0.7rem;
 	padding: 5px 3px;
 	text-align: center;
 }
 
-.tabla .cuerpo_tabla tr td,
+.tabla .encabezado_tabla_home tr td,
 .tabla .cuerpo_tabla_cambio_estado tr td,
 .cuerpo_tabla_tipo_tram tr td {
-	padding: 5px 3px;
+	padding: 3px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -108,12 +112,13 @@
 		font-size: 1.1rem;
 	}
 
-	.tabla .encabezado_tabla tr,
-	.tabla .cuerpo_tabla tr {
-		grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+	.tabla .encabezado_tabla_home tr,
+	.tabla .cuerpo_tabla_home tr {
+		text-align: center;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 	}
 
-	.tabla .encabezado_tabla tr th,
+	.tabla .encabezado_tabla_home tr th,
 	.tabla .encabezado_tabla_cambio_estado tr th,
 	.tabla .encabezado_tabla_tipo_tram tr th,
 	.tabla .cuerpo_tabla_tipo_tram tr th {
@@ -121,7 +126,16 @@
 		padding: 5px;
 	}
 
-	.tabla .cuerpo_tabla tr td,
+	.tabla .encabezado_tabla_home tr,
+	.tabla .cuerpo_tabla_home tr,
+	.tabla .encabezado_tabla_cambio_estado tr,
+	.tabla .cuerpo_tabla_cambio_estado tr,
+	.tabla .encabezado_tabla_tipo_tram tr,
+	.tabla .cuerpo_tabla_tipo_tram tr {
+		justify-content: center;
+	}
+
+	.tabla .cuerpo_tabla_home tr td,
 	.tabla .cuerpo_tabla_cambio_estado tr td,
 	.tabla .encabezado_tabla_tipo_tram tr td,
 	.tabla .cuerpo_tabla_tipo_tram tr td {
@@ -167,13 +181,13 @@
 	}
 }
 @media screen and (min-width: 1536px) {
-	.tabla .encabezado_tabla tr th,
+	.tabla .encabezado_tabla_home tr th,
 	.tabla .encabezado_tabla_cambio_estado tr th {
 		font-size: 1.5rem;
 		padding: 15px;
 	}
 
-	.tabla .cuerpo_tabla tr td,
+	.tabla .cuerpo_tabla_home tr td,
 	.tabla .cuerpo_tabla_cambio_estado tr td {
 		font-size: 1.4rem;
 		padding: 15px;

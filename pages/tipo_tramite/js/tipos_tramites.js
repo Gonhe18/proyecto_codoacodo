@@ -4,7 +4,6 @@ let bloque_tabla = document.getElementById("bloque_tabla");
 let tabla = document.getElementById("tabla");
 let mostrar_mapa = document.getElementById("mostrar_mapa");
 let mapa = document.getElementById("mapa");
-let form_nuevo = document.getElementById("form_nuevo");
 
 // const URL = "http://gbazzani.pythonanywhere.com/";
 const URL = "http://127.0.0.1:5000/";

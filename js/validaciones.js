@@ -9,7 +9,6 @@ export const validacionBlur = (data) => {
 
 	campos.forEach((campo) => {
 		let camp = document.getElementById(`${campo}`);
-
 		let reglasValidacion = JSON.parse(camp.dataset.validacion);
 
 		reglasValidacion.forEach((reglas) => {
